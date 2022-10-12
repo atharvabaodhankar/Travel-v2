@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Satisfy&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --cyan : #1dc9cb ;
+    --dark-cyan :#138788;
+}
+#header{
+    background-image: url(https://mobirise.com/website-templates/travel-website-templates/assets/images/artiom-vallat-558027-unsplash-1519757244-94.181.200.62-1920x1280.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 8rem;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    right: 0;
+    transition: all .5s ease;
+}
+nav.activebg{
+    background-color: #fff;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li a{
+    color: #363636;
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
+}
+nav ul li {
+    margin: 0 1.5rem;
+}
+.btn{
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: var(--cyan);
+    transition: all .3s ease;
+    margin: 1.5rem;
+}
+.btn:hover{
+    background-color: var(--dark-cyan);
+}
+.hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.hambar{
+    position: absolute;
+    width: 31px;
+    height: 2px;
+    border-radius: 3rem;
+    background-color: #363636;
+    transition: all .4s ease;
+}
+.hambar:nth-child(1){
+    top: 18px;
+}
+.hambar:nth-child(3){
+    bottom: 18px;
+}
+.hamburger.active .hambar:nth-child(1){
+    top: initial;
+    transform: rotate(135deg);
+}
+.hamburger.active .hambar:nth-child(2){
+    opacity: 0;
+    transform: translateX(-10px);
+}
+.hamburger.active .hambar:nth-child(3){
+    bottom: initial;
+    transform: rotate(-135deg);
+}
+@media screen and (max-width:940px) {
+    nav ul{
+        flex-direction: column;
+        position: fixed;
+        top: 8rem;
+        width: 100%;
+        padding: 4rem 0;
+        background-color: #e3e3e3;
+        top: -500px;
+        opacity: 0;
+        z-index: 1;
+        transition: all .5s ease;
+    }
+    nav.active ul{
+        top: 8rem;
+        opacity: 1;
+    }
+    nav ul li{
+        margin: 2rem 0;
+    }
+    .hamburger{
+        display: inherit;
+    }
+}

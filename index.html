@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- https://mobirise.com/website-templates/travel-website-templates/ -->
+    <title>Travel Website Teamplates</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="#">ContactUs</a></li>
+
+            <a href="#" class="btn">Download Now</a>
+        </ul>
+        <div class="hamburger">
+            <div class="hambar"></div>
+            <div class="hambar"></div>
+            <div class="hambar"></div>
+        </div>
+    </nav>
+    <section id="header">
+
+    </section>
+    <script>
+        let navBar = document.querySelector('nav');
+        let hamburger = document.querySelector(".hamburger");
+
+        hamburger.addEventListener('click' , ()=>{
+            navBar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        })
+
+        window.addEventListener('scroll' , ()=>{
+            console.log(scrollY)
+            if(scrollY>200){
+                navBar.classList.add('activebg');
+            }else{
+                navBar.classList.remove('activebg');
+            }
+        })
+    </script>
+</body>
+</html>
